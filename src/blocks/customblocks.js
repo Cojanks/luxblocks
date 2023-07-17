@@ -42,7 +42,7 @@ var motorForward = {
 Blockly.Blocks['action_motor_forward'] = {
   init: function () {
     this.jsonInit(motorForward);
-    this.setStyle('loop_blocks');
+    this.setStyle('procedure_blocks');
   },
 };
 
@@ -62,7 +62,7 @@ var motorBackward = {
 Blockly.Blocks['action_motor_backward'] = {
   init: function () {
     this.jsonInit(motorBackward);
-    this.setStyle('loop_blocks');
+    this.setStyle('procedure_blocks');
   },
 };
 
