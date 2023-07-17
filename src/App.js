@@ -35,15 +35,18 @@ function App(props) {
           }}
           initialXml={`
 <xml xmlns="http://www.w3.org/1999/xhtml">
-<Block type="action_motor_forward" />
+<Block type="action_motor_forward_by_step" />
 </xml>
       `}
         >
           <Category name="Actions" colour="rgb(255, 51, 85)">
             <Block type="action_motor_forward" />
             <Block type="action_motor_backward" />
+            <Block type="action_motor_forward_by_step" />
+            <Block type="action_motor_backward_by_step" />
             <Block type="action_turn_left" />
             <Block type="action_turn_right" />
+            <Block type="action_wait" />
           </Category>
           <Category name="Logic" colour="rgb(11, 142, 105)">
             <Block type="controls_repeat_ext">

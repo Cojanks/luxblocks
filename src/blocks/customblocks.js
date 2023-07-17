@@ -26,15 +26,10 @@
 
 import * as Blockly from 'blockly/core';
 
+// Motor
 var motorForward = {
   type: 'action_motor_forward',
-  message0: 'Motor Forward %1 Steps',
-  args0: [
-    {
-      type: 'field_number',
-      name: 'STEP',
-    },
-  ],
+  message0: 'Motor Forward',
   previousStatement: null,
   nextStatement: null,
 };
@@ -47,14 +42,8 @@ Blockly.Blocks['action_motor_forward'] = {
 };
 
 var motorBackward = {
-  type: 'action_motor_backward',
-  message0: 'Motor Backward %1 Steps',
-  args0: [
-    {
-      type: 'field_number',
-      name: 'STEP',
-    },
-  ],
+  type: 'action_motor_forward',
+  message0: 'Motor Backward',
   previousStatement: null,
   nextStatement: null,
 };
@@ -66,6 +55,47 @@ Blockly.Blocks['action_motor_backward'] = {
   },
 };
 
+var motorForwardByStep = {
+  type: 'action_motor_forward_by_step',
+  message0: 'Motor Forward %1 Steps',
+  args0: [
+    {
+      type: 'field_number',
+      name: 'STEP',
+    },
+  ],
+  previousStatement: null,
+  nextStatement: null,
+};
+
+Blockly.Blocks['action_motor_forward_by_step'] = {
+  init: function () {
+    this.jsonInit(motorForwardByStep);
+    this.setStyle('procedure_blocks');
+  },
+};
+
+var motorBackwardByStep = {
+  type: 'action_motor_backward_by_step',
+  message0: 'Motor Backward %1 Steps',
+  args0: [
+    {
+      type: 'field_number',
+      name: 'STEP',
+    },
+  ],
+  previousStatement: null,
+  nextStatement: null,
+};
+
+Blockly.Blocks['action_motor_backward_by_step'] = {
+  init: function () {
+    this.jsonInit(motorBackwardByStep);
+    this.setStyle('procedure_blocks');
+  },
+};
+
+// Turn
 var turnLeft = {
   type: 'action_turn_left',
   message0: 'Turn Left',
@@ -90,6 +120,27 @@ var turnRight = {
 Blockly.Blocks['action_turn_right'] = {
   init: function () {
     this.jsonInit(turnRight);
+    this.setStyle('procedure_blocks');
+  },
+};
+
+// Other Actions
+var wait = {
+  type: 'action_wait',
+  message0: 'Wait %1 seconds',
+  args0: [
+    {
+      type: 'field_number',
+      name: 'wait',
+    },
+  ],
+  previousStatement: null,
+  nextStatement: null,
+};
+
+Blockly.Blocks['action_wait'] = {
+  init: function () {
+    this.jsonInit(wait);
     this.setStyle('procedure_blocks');
   },
 };
