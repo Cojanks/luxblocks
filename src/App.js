@@ -42,6 +42,7 @@ function App(props) {
           <Category name="Actions" colour="rgb(255, 51, 85)">
             <Block type="action_motor_forward" />
             <Block type="action_motor_backward" />
+            <Block type="action_motor_stop" />
             <Block type="action_motor_forward_by_step" />
             <Block type="action_motor_backward_by_step" />
             <Block type="action_turn_left" />

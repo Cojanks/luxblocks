@@ -29,7 +29,7 @@ import * as Blockly from 'blockly/core';
 // Motor
 var motorForward = {
   type: 'action_motor_forward',
-  message0: 'Motor Forward',
+  message0: 'Motor forward',
   previousStatement: null,
   nextStatement: null,
 };
@@ -43,7 +43,7 @@ Blockly.Blocks['action_motor_forward'] = {
 
 var motorBackward = {
   type: 'action_motor_forward',
-  message0: 'Motor Backward',
+  message0: 'Motor backward',
   previousStatement: null,
   nextStatement: null,
 };
@@ -55,9 +55,23 @@ Blockly.Blocks['action_motor_backward'] = {
   },
 };
 
+var motorstop = {
+  type: 'action_motor_stop',
+  message0: 'Motor stop',
+  previousStatement: null,
+  nextStatement: null,
+};
+
+Blockly.Blocks['action_motor_stop'] = {
+  init: function () {
+    this.jsonInit(motorstop);
+    this.setStyle('procedure_blocks');
+  },
+};
+
 var motorForwardByStep = {
   type: 'action_motor_forward_by_step',
-  message0: 'Motor Forward %1 Steps',
+  message0: 'Motor forward %1 steps',
   args0: [
     {
       type: 'field_number',
@@ -77,7 +91,7 @@ Blockly.Blocks['action_motor_forward_by_step'] = {
 
 var motorBackwardByStep = {
   type: 'action_motor_backward_by_step',
-  message0: 'Motor Backward %1 Steps',
+  message0: 'Motor backward %1 Ssteps',
   args0: [
     {
       type: 'field_number',
