@@ -12,7 +12,6 @@ import BlocklyComponent, {
 } from './Blockly';
 
 import './blocks/customblocks';
-import './generator/generator';
 
 function App(props) {
   return (
